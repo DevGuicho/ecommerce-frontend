@@ -4,7 +4,7 @@ import './styles.css'
 
 const Portal = ({ children }) => {
   return ReactDOM.createPortal(
-    <div className='Modal container'>{children}</div>,
+    <div className='Modal'>{children}</div>,
     document.getElementById('portal')
   )
 }

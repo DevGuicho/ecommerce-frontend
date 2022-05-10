@@ -7,7 +7,9 @@ import './styles.css'
 const HomePage = () => {
   return (
     <div>
-      <SearchInput />
+      <div className='HomePage__search'>
+        <SearchInput />
+      </div>
       <div className='HomePage__navbar'>
         <Navbar />
       </div>

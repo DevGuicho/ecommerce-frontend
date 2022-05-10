@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import iconMenu from '../../assets/icon_menu.svg'
 import logo from '../../assets/logo_yard_sale.svg'
@@ -7,6 +7,8 @@ import Navbar from '../Navbar'
 import './styles.css'
 
 const Header = () => {
+  const location = useLocation()
+
   return (
     <>
       <header className='Header'>
@@ -29,7 +31,7 @@ const Header = () => {
           <Link className='Header__userLogin' to='/auth/login'>
             Sign In
           </Link>
-          <Link to='/cart'>
+          <Link to='/cart' state={{ backgroundLocation: location }}>
             <img src={iconCart} alt='' width={20} height={21} />
           </Link>
         </div>

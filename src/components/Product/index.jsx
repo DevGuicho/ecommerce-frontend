@@ -1,12 +1,18 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import fridge from '../../assets/fridge.jpg'
 
 import './style.css'
 
 const Product = () => {
+  const location = useLocation()
+
   return (
     <div className='Product'>
-      <Link to='/shop/product/fdasfdsa' className='Product__image'>
+      <Link
+        to='/shop/product/fdasfdsa'
+        className='Product__image'
+        state={{ backgroundLocation: location }}
+      >
         <img src={fridge} alt='' width={163} height={163} />
       </Link>
       <div className='Product__caption'>

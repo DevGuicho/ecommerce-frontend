@@ -54,3 +54,15 @@
   font: bold 1rem 'Quicksand';
   color: var(--black);
 }
+
+@media screen and (min-width: 769px) {
+  .Cart {
+    position: fixed;
+    right: 0;
+    top: var(--heigh-header);
+    height: calc(100vh - var(--heigh-header));
+    max-width: 384px;
+    background-color: white;
+    padding: 1.5rem;
+  }
+}

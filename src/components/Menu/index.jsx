@@ -11,7 +11,7 @@ const Menu = () => {
           <i />
         </button>
       </div>
-      <div className='Menu'>
+      <div className='Menu container'>
         <div className='Categories'>
           <h2 className='Categories__title'>Categories</h2>
           <nav className='Menu'>

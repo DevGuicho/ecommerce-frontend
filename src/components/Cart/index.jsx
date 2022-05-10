@@ -8,7 +8,7 @@ const Cart = () => {
   const navigate = useNavigate()
 
   return (
-    <div className='Cart'>
+    <div className='Cart container'>
       <div className='Cart__header'>
         <button className='Cart__buttonBack' onClick={() => navigate(-1)}>
           <i />

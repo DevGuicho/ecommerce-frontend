@@ -1,5 +1,11 @@
+.HomePage__navbar {
+  padding: 1.5rem 0;
+}
 @media screen and (min-width: 769px) {
   .HomePage__navbar {
     display: none;
+  }
+  .HomePage__search {
+    padding: 2.625rem 0;
   }
 }
