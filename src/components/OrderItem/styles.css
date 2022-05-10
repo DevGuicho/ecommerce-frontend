@@ -1,0 +1,36 @@
+.OrderItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.OrderItem__description {
+  display: flex;
+  flex-direction: column;
+}
+.OrderItem__date {
+  font: bold 1rem 'Quicksand';
+}
+.OrderItem__articles {
+  font: normal 0.875 'Quicksand';
+  color: var(--text-gray);
+}
+.OrderItem__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  gap: 1.5rem;
+}
+.OrderItem__total {
+  color: var(--black);
+  font: bold 1rem 'Quicksand';
+}
+.OrderItem__icon {
+  display: inline-block;
+  background-image: url('../../assets/chevron-right.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+}

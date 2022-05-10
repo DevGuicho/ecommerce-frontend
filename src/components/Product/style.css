@@ -1,0 +1,88 @@
+.Product {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.Product__image {
+  border-radius: 15px;
+  overflow: hidden;
+}
+.Product__image img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  object-position: center;
+}
+.Product__caption {
+  display: flex;
+  gap: 1rem;
+}
+.Product__caption span {
+  color: var(--black);
+  font: bold 1rem 'Quicksand';
+}
+.Product__caption p {
+  color: var(--text-gray);
+  font: normal 0.875rem 'Quicksand';
+}
+.Product__description {
+  flex: 1 1 auto;
+}
+.Product__button {
+  flex: 0 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.116);
+}
+.Product__button.onCart {
+  background: none;
+}
+.Product__button i {
+  width: 20px;
+  height: 21px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.Product__button i {
+  background-image: url('../../assets/cart_white.svg');
+}
+.Product__button i::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  background: white;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background-image: url('../../assets/plus.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.Product__button.onCart i {
+  background-image: url('../../assets/cart_gray.svg');
+}
+.Product__button.onCart i::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background-image: url('../../assets/check.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}

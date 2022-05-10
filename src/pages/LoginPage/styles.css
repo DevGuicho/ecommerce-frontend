@@ -1,0 +1,58 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.Login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.62rem;
+  align-items: center;
+}
+.Login__header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: none;
+}
+.Login__InputWrap {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.Login__button {
+  width: 100%;
+}
+.Login__link {
+  text-decoration: none;
+  font: medium 0.875rem 'Quicksand';
+  color: var(--primary-color);
+}
+.Login__signup {
+  width: 90%;
+  position: absolute;
+  bottom: 1.62rem;
+}
+
+@media screen and (min-width: 769px) {
+  .login-page {
+    max-width: 340px;
+  }
+  .Login__signup {
+    max-width: 340px;
+  }
+  .Login__logo {
+    display: none;
+  }
+  .Login__header {
+    display: block;
+  }
+}

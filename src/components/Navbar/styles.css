@@ -1,0 +1,26 @@
+.Navbar {
+  overflow-x: scroll;
+}
+.Navbar__list {
+  display: flex;
+  list-style: none;
+}
+
+.Navbar__link {
+  font: 600 1rem 'Quicksand';
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.375rem 1rem;
+  color: var(--text-gray-secondary);
+  border: 1px solid white;
+}
+.Navbar__link.active {
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  color: var(--primary-color);
+}
+@media screen and (min-width: 769px) {
+  .Navbar {
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,48 @@
+.ProductDetail {
+  min-height: calc(100vh - var(--heigh-header));
+  position: relative;
+}
+
+.ProductDetail__img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 2.5rem;
+}
+.ProductDetail__price {
+  color: var(--black);
+  font: bold 1.125rem 'Quicksand';
+}
+.ProductDetail__name {
+  font: normal 1.125rem 'Quicksand';
+  color: var(--text-gray);
+  margin-bottom: 1rem;
+}
+.ProductDetail__description {
+  font: normal 1rem 'Quicksand';
+  color: var(--text-gray);
+}
+.btn.ProductDetail__button {
+  position: absolute;
+  width: 100%;
+  bottom: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+.ProductDetail__button i {
+  display: inline-block;
+  width: 23px;
+  height: 24px;
+  background-image: url('../../assets/cart_white.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

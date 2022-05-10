@@ -1,0 +1,45 @@
+.Modal {
+  position: fixed;
+  /*   top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  z-index: 10; */
+}
+.Modal__header {
+  width: 100%;
+  height: var(--heigh-header);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.Modal__button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+}
+.Modal__button i {
+  display: inline-block;
+  background-image: url('../../assets/close-icon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (min-width: 769px) {
+  .Modal {
+    max-width: 384px;
+    right: 0;
+    top: 0;
+  }
+  .Modal.container {
+    margin: 0;
+  }
+}

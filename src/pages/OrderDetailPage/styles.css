@@ -1,0 +1,39 @@
+.OrderDetailPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.25rem;
+}
+.OrderDetailPage__title {
+  font: bold 1rem 'Quicksand';
+  text-align: center;
+}
+.OrderDetailPage__summary {
+  background: var(--bg-green);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.OrderDetailPage__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.OrderDetailPage__date {
+  font: bold 1rem 'Quicksand';
+}
+.OrderDetailPage__articles {
+  font: normal 0.875rem 'Quicksand';
+}
+.OrderDetailPage__price {
+  font: bold 1rem 'Quicksand';
+  color: var(--black);
+}
+.OrderDetailPage__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-right: 1rem;
+}

@@ -1,0 +1,56 @@
+.Cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  gap: 1.3rem;
+  padding-bottom: 22px;
+}
+.Cart__header {
+  flex: 0 0 auto;
+  width: 100%;
+  height: var(--heigh-header);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Cart__title {
+  font: bold 1rem 'Quicksand';
+}
+.Cart__right {
+  width: 25px;
+  height: 20px;
+}
+.Cart__buttonBack {
+  background: none;
+  border: none;
+}
+.Cart__buttonBack i {
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  background-image: url('../../assets/arrow-left.svg');
+}
+
+.Cart__list {
+  flex: 1 1 auto;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.Cart__summary {
+  background: var(--bg-green);
+  border-radius: 10px;
+  padding: 1.6rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.Cart__total {
+  font: bold 0.875rem 'Quicksand';
+}
+.Cart__totalPrice {
+  font: bold 1rem 'Quicksand';
+  color: var(--black);
+}

@@ -1,0 +1,40 @@
+.CartItem {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.CartItem__img {
+  flex: 0 0 auto;
+  vertical-align: middle;
+}
+.CartItem__caption {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.CartItem__button {
+  width: 15px;
+  height: 15px;
+  background: none;
+  border: none;
+}
+.CartItem__button i {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url('../../assets/close-icon.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.CartItem__caption h2 {
+  font: normal 0.875rem 'Quicksand';
+  color: var(--text-gray);
+}
+.CartItem__caption span {
+  font: bold 1rem 'Quicksand';
+  color: var(--black);
+}

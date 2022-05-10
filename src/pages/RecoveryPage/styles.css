@@ -1,0 +1,45 @@
+.RecoveryPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 4.625rem;
+}
+.RecoveryPage__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.RecoveryPage__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.81rem;
+}
+.RecoverPage__title {
+  font: bold 1.125rem 'Quicksand';
+  margin-bottom: 0.6rem;
+  text-align: center;
+}
+.RecoverPage__text {
+  color: var(--text-gray);
+  font: normal 1.125rem 'Quicksand';
+  text-align: center;
+}
+.RecoveryPage__button {
+  width: 100%;
+}
+.RecoveryPage__link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+.RecoveryPage__envelope {
+  padding: 3rem 2rem;
+}
+
+@media screen and (min-width: 769px) {
+  .RecoveryPage__logo {
+    display: none;
+  }
+}

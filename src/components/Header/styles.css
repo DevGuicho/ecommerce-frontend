@@ -1,0 +1,41 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: var(--heigh-header);
+}
+.Header__btnMenu {
+  background: none;
+  border: none;
+}
+.Header__navbar {
+  display: none;
+}
+.Header__user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.Header__userLogin {
+  display: none;
+  text-decoration: none;
+  color: var(--primary-color);
+  font: 600 0.875rem 'Quicksand';
+}
+@media screen and (min-width: 769px) {
+  .Header__btnMenu {
+    display: none;
+  }
+  .Header__logo {
+    width: 144px;
+    height: 30px;
+  }
+  .Header__navbar {
+    display: block;
+  }
+  .Header__userLogin {
+    display: block;
+  }
+}
