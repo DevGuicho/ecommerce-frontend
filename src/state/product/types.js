@@ -1,0 +1,3 @@
+export const SET_PRODUCTS = 'SET_PRODUCTS'
+export const GET_PRODUCT = 'GET_PRODUCT'
+export const TOGGLE_LOADING = 'TOGGLE_LOADING'

@@ -1,18 +1,18 @@
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom'
 
-import Cart from '../components/Cart'
-import Menu from '../components/Menu'
-import Portal from '../components/Portal'
-import ShopLayout from '../components/ShopLayout'
 import AccountPage from '../pages/AccountPage'
+import Cart from '../components/Cart'
 import CreateNewPassPage from '../pages/CreateNewPassPage'
 import HomePage from '../pages/HomePage'
 import LoginPage from '../pages/LoginPage'
+import Menu from '../components/Menu'
 import OrderDetailPage from '../pages/OrderDetailPage'
 import OrdersPage from '../pages/OrdersPage'
+import Portal from '../components/Portal'
 import ProductDetailPage from '../pages/ProductDetailPage'
 import RecoveryPage from '../pages/RecoveryPage'
 import RecoveryPageInstructions from '../pages/RecoveryPageInstructions'
+import ShopLayout from '../components/ShopLayout'
 
 const App = () => {
   const location = useLocation()
