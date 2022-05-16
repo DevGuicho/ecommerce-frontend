@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 import Header from '../../components/Header'
 import useProduct from '../../hooks/useProduct'
+import currencyFormat from '../../utils/currencyFormat'
 
 import './styles.css'
 
@@ -34,7 +35,9 @@ const ProductDetailPage = () => {
             </button>
             <img src={product?.imgUrl} alt='' className='ProductDetail__img' />
             <figcaption className='ProductDetail__caption'>
-              <span className='ProductDetail__price'>{product?.price}</span>
+              <span className='ProductDetail__price'>
+                {currencyFormat(product?.price || 0)}
+              </span>
               <h2 className='ProductDetail__name'>{product?.name}</h2>
               <p className='ProductDetail__description'>
                 {product?.description}

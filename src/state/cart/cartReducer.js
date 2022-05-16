@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import { ADD_PRODUCT, DELETE_PRODUCT } from './types'
 
 export default (state, action) => {
@@ -16,10 +17,14 @@ export default (state, action) => {
         products: state.products.filter(
           (product) => product.id !== action.payload
         ),
-        total: state.products
-          .filter((product) => product.id !== action.payload)
-          .map((product) => product.price)
-          .reduce((prev, current) => prev + current)
+        total:
+          state.products.filter((product) => product.id !== action.payload)
+            .length === 0
+            ? 0
+            : state.products
+                .filter((product) => product.id !== action.payload)
+                .map((product) => product.price)
+                .reduce((prev, current) => prev + current)
       }
     default:
       return state

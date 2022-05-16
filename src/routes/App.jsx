@@ -12,6 +12,7 @@ import Portal from '../components/Portal'
 import ProductDetailPage from '../pages/ProductDetailPage'
 import RecoveryPage from '../pages/RecoveryPage'
 import RecoveryPageInstructions from '../pages/RecoveryPageInstructions'
+import SearchPage from '../pages/SearchPage'
 import ShopLayout from '../components/ShopLayout'
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
         />
         <Route path='shop' element={<ShopLayout />}>
           <Route index element={<HomePage />} />
+          <Route path='search/:query' element={<SearchPage />} />
         </Route>
         <Route path='account' element={<ShopLayout />}>
           <Route index element={<AccountPage />} />

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import useCart from '../../hooks/useCart'
+import currencyFormat from '../../utils/currencyFormat'
 
 import './style.css'
 
@@ -28,7 +29,7 @@ const Product = ({ id, name, price, imgUrl }) => {
       </Link>
       <div className='Product__caption'>
         <div className='Product__description'>
-          <span>{price}</span>
+          <span>{currencyFormat(price)}</span>
           <p>{name}</p>
         </div>
         <button

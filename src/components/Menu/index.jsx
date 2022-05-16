@@ -1,9 +1,12 @@
+/* eslint-disable multiline-ternary */
 import { Link, useNavigate } from 'react-router-dom'
+import useUser from '../../hooks/useUser'
 
 import './styles.css'
 
 const Menu = () => {
   const navigate = useNavigate()
+  const { email, isAuth, logout } = useUser()
   return (
     <div className='Menu__contenido'>
       <div className='Modal__header'>
@@ -49,23 +52,40 @@ const Menu = () => {
             </ol>
           </nav>
         </div>
-        <div>
-          <ol className='Menu__list'>
-            <li className='Menu__item'>
-              <Link to='/orders' className='Menu__link'>
-                My Orders
-              </Link>
-            </li>
-            <li className='Menu__item'>
-              <Link to='/account' className='Menu__link'>
-                My account
-              </Link>
-            </li>
-          </ol>
-        </div>
+        {isAuth ? (
+          <div>
+            <ol className='Menu__list'>
+              <li className='Menu__item'>
+                <Link to='/orders' className='Menu__link'>
+                  My Orders
+                </Link>
+              </li>
+              <li className='Menu__item'>
+                <Link to='/account' className='Menu__link'>
+                  My account
+                </Link>
+              </li>
+            </ol>
+          </div>
+        ) : (
+          <div />
+        )}
         <div className='Menu__user'>
-          <span>camilayokoo@gmail.com</span>
-          <button className=''>Sign out</button>
+          {isAuth ? (
+            <>
+              <span>{email}</span>
+              <button
+                onClick={() => {
+                  logout()
+                  navigate(-1)
+                }}
+              >
+                Sign out
+              </button>
+            </>
+          ) : (
+            <button onClick={() => navigate('/auth/login')}>LogIn</button>
+          )}
         </div>
       </div>
     </div>

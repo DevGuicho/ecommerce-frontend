@@ -6,15 +6,18 @@ import App from './routes/App'
 import ProductState from './state/product/ProductState'
 import './index.css'
 import CartState from './state/cart/CartState'
+import UserState from './state/user/UserState'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ProductState>
-      <CartState>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </CartState>
-    </ProductState>
+    <UserState>
+      <ProductState>
+        <CartState>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </CartState>
+      </ProductState>
+    </UserState>
   </React.StrictMode>
 )

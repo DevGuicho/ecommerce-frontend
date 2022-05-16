@@ -1,4 +1,5 @@
 import useCart from '../../hooks/useCart'
+import currencyFormat from '../../utils/currencyFormat'
 import './style.css'
 
 const CartItem = ({ disabled, imgUrl, price, name, id }) => {
@@ -17,7 +18,7 @@ const CartItem = ({ disabled, imgUrl, price, name, id }) => {
       />
       <div className='CartItem__caption'>
         <h2>{name}</h2>
-        <span>{price}</span>
+        <span>{currencyFormat(price || 0)}</span>
       </div>
       {!disabled && (
         <button className='CartItem__button' onClick={handleClick}>

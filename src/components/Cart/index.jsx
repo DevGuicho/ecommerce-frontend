@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import useCart from '../../hooks/useCart'
+import currencyFormat from '../../utils/currencyFormat'
 
 import CartItem from '../CartItem'
 import './styles.css'
@@ -26,7 +27,7 @@ const Cart = () => {
       </div>
       <div className='Cart__summary'>
         <span className='Cart__total'>Total</span>
-        <span className='Cart__totalPrice'>{total}</span>
+        <span className='Cart__totalPrice'>{currencyFormat(total)}</span>
       </div>
       <button className='Cart__button btn btn-primary'>Checkout</button>
     </div>

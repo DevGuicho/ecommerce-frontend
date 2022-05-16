@@ -17,6 +17,7 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  height: 100%;
 }
 .Header__userLogin {
   display: none;
@@ -24,6 +25,62 @@
   color: var(--primary-color);
   font: 600 0.875rem 'Quicksand';
 }
+.Header__userEmail {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: 300 0.875rem 'Quicksand';
+  color: black;
+}
+.Header__userEmail i {
+  display: block;
+  background-image: url('../../assets/chevron-down.svg');
+  width: 15px;
+  height: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Header__userOptions {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.Header__userButtons {
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+  padding: 1.5rem;
+  position: absolute;
+  top: var(--heigh-header);
+  width: 153px;
+}
+.Header__userButton {
+  width: 100%;
+  text-align: right;
+  text-decoration: none;
+  font: bold 1rem 'Quicksand';
+  color: black;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.Header__userButton--login {
+  color: var(--primary-color);
+  width: 100%;
+  text-align: right;
+  text-decoration: none;
+  font: bold 1rem 'Quicksand';
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
 @media screen and (min-width: 769px) {
   .Header__btnMenu {
     display: none;
@@ -37,5 +94,11 @@
   }
   .Header__userLogin {
     display: block;
+  }
+  .Header__userEmail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
   }
 }
