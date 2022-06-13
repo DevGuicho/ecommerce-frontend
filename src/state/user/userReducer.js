@@ -1,4 +1,4 @@
-import { LOGIN, LOGOUT } from './types'
+import { LOGIN, LOGOUT, SET_ERROR } from './types'
 import initalState from './initialState'
 
 export default (state, action) => {
@@ -11,6 +11,11 @@ export default (state, action) => {
       }
     case LOGOUT:
       return { ...initalState }
+    case SET_ERROR:
+      return {
+        ...state,
+        error: action.payload
+      }
     default:
       return state
   }

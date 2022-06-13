@@ -14,16 +14,33 @@ import RecoveryPage from '../pages/RecoveryPage'
 import RecoveryPageInstructions from '../pages/RecoveryPageInstructions'
 import SearchPage from '../pages/SearchPage'
 import ShopLayout from '../components/ShopLayout'
+import PublicRoute from './PublicRoute'
+import useUser from '../hooks/useUser'
+import { useEffect } from 'react'
+import CheckoutPage from '../pages/CheckoutPage'
 
 const App = () => {
   const location = useLocation()
   const state = location.state
 
+  const { checkToken } = useUser()
+
+  useEffect(() => {
+    checkToken()
+  }, [])
+
   return (
     <>
       <Routes location={state?.backgroundLocation || location}>
         <Route path='/' element={<Navigate replace to='/shop' />} />
-        <Route path='/auth/login' element={<LoginPage />} />
+        <Route
+          path='/auth/login'
+          element={
+            <PublicRoute>
+              <LoginPage />
+            </PublicRoute>
+          }
+        />
 
         <Route path='/auth/recovery-pass' element={<RecoveryPage />} />
         <Route
@@ -34,6 +51,9 @@ const App = () => {
           path='/auth/recovery-pass/:token'
           element={<CreateNewPassPage />}
         />
+        <Route path='checkout'>
+          <Route index element={<CheckoutPage />} />
+        </Route>
         <Route path='shop' element={<ShopLayout />}>
           <Route index element={<HomePage />} />
           <Route path='search/:query' element={<SearchPage />} />

@@ -1,6 +1,11 @@
 const initialState = {
   isLoading: false,
   product: null,
+  products: []
+}
+/* const initialState = {
+  isLoading: false,
+  product: null,
   products: [
     {
       id: 1,
@@ -135,6 +140,6 @@ const initialState = {
       categoryId: 1
     }
   ]
-}
+} */
 
 export default initialState

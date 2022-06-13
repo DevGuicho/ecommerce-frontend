@@ -1,6 +1,6 @@
 import { apiUrl } from '../config'
 
-export const getProducts = async () => {
+export const getProductsFromApi = async () => {
   const res = await fetch(`${apiUrl}/api/products/`)
   const { data } = await res.json()
   return data.map((product) => ({

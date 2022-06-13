@@ -44,7 +44,7 @@
 
 @media screen and (min-width: 769px) {
   .login-page {
-    max-width: 340px;
+    max-width: 400px;
   }
   .Login__signup {
     max-width: 340px;

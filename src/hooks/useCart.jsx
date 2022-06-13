@@ -8,6 +8,7 @@ const useCart = () => {
     productsCart: cartContext.products,
     addProductToCart: cartContext.addProduct,
     deleteProductFromCart: cartContext.deleteProduct,
+    payCart: cartContext.payCart,
     total: cartContext.total
   }
 }

@@ -8,7 +8,7 @@ import './style.css'
 const Product = ({ id, name, price, imgUrl }) => {
   const [isOnCart, setIsOnCart] = useState(false)
   const location = useLocation()
-  const { addProductToCart, productsCart } = useCart()
+  const { addProductToCart, productsCart, total } = useCart()
 
   const handleClick = () => {
     addProductToCart({ product: { id, name, price, imgUrl } })
@@ -16,7 +16,7 @@ const Product = ({ id, name, price, imgUrl }) => {
 
   useEffect(() => {
     setIsOnCart(productsCart.some((product) => product.id === id) > 0)
-  }, [productsCart])
+  }, [productsCart, total])
 
   return (
     <div className='Product'>

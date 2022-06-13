@@ -1,16 +1,17 @@
 import { Link } from 'react-router-dom'
+import currencyFormat from '../../utils/currencyFormat'
 
 import './styles.css'
 
-const OrderItem = () => {
+const OrderItem = ({ fecha, totalProductos, totalPago, id }) => {
   return (
     <div className='OrderItem'>
       <div className='OrderItem__description'>
-        <span className='OrderItem__date'>04.25.2020</span>
-        <span className='OrderItem__articles'>6 articulos</span>
+        <span className='OrderItem__date'>{fecha}</span>
+        <span className='OrderItem__articles'>{totalProductos} articulos</span>
       </div>
-      <Link className='OrderItem__link' to=':fdasfsd'>
-        <span className='OrderItem__total'>$120.00</span>
+      <Link className='OrderItem__link' to={`${id}`}>
+        <span className='OrderItem__total'>{currencyFormat(totalPago)}</span>
         <i className='OrderItem__icon' />
       </Link>
     </div>

@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Navbar from '../../components/Navbar'
 import Product from '../../components/Product'
 import ProductList from '../../components/ProductList'
@@ -7,7 +8,11 @@ import useProduct from '../../hooks/useProduct'
 import './styles.css'
 
 const HomePage = () => {
-  const { products } = useProduct()
+  const { products, getProducts } = useProduct()
+
+  useEffect(() => {
+    getProducts()
+  }, [])
 
   return (
     <div>

@@ -1,4 +1,4 @@
-import { GET_PRODUCT, TOGGLE_LOADING } from './types'
+import { GET_PRODUCT, SET_PRODUCTS, TOGGLE_LOADING } from './types'
 
 export default (state, action) => {
   switch (action.type) {
@@ -7,11 +7,16 @@ export default (state, action) => {
         ...state,
         isLoading: !state.isLoading
       }
+    case SET_PRODUCTS:
+      return {
+        ...state,
+        products: [...action.payload]
+      }
     case GET_PRODUCT: {
       return {
         ...state,
         product: state.products.filter(
-          (product) => product.id === action.value
+          (product) => product.id === action.payload
         )[0],
         isLoading: false
       }

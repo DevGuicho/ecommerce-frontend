@@ -11,6 +11,10 @@ const Cart = () => {
 
   const { productsCart, total } = useCart()
 
+  const handleClick = () => {
+    navigate('/checkout')
+  }
+
   return (
     <div className='Cart container'>
       <div className='Cart__header'>
@@ -29,7 +33,14 @@ const Cart = () => {
         <span className='Cart__total'>Total</span>
         <span className='Cart__totalPrice'>{currencyFormat(total)}</span>
       </div>
-      <button className='Cart__button btn btn-primary'>Checkout</button>
+      <button
+        type='button'
+        className='Cart__button btn btn-primary'
+        onClick={handleClick}
+        disabled={productsCart.length === 0}
+      >
+        Checkout
+      </button>
     </div>
   )
 }

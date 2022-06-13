@@ -4,6 +4,7 @@ import ProductContext from './ProductContext'
 import ProductReducer from './ProductReducer'
 import { GET_PRODUCT, SET_PRODUCTS, TOGGLE_LOADING } from './types'
 import initialState from './initialState'
+import { getProductsFromApi } from '../../utils/getProductsFromApi'
 
 const ProductState = ({ children }) => {
   const [state, dispatch] = useReducer(ProductReducer, initialState)
@@ -12,10 +13,12 @@ const ProductState = ({ children }) => {
     type: TOGGLE_LOADING
   })
 
-  const getProducts = () => {
+  const getProducts = async () => {
+    const products = await getProductsFromApi()
+
     dispatch({
       type: SET_PRODUCTS,
-      value: []
+      payload: products
     })
   }
 
@@ -23,7 +26,7 @@ const ProductState = ({ children }) => {
     dispatch(toggleLoading())
     dispatch({
       type: GET_PRODUCT,
-      value: Number(id)
+      payload: Number(id)
     })
   }
 

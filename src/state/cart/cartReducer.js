@@ -1,5 +1,5 @@
 /* eslint-disable indent */
-import { ADD_PRODUCT, DELETE_PRODUCT } from './types'
+import { ADD_PRODUCT, CLEAR_CART, DELETE_PRODUCT, SET_ERROR } from './types'
 
 export default (state, action) => {
   switch (action.type) {
@@ -25,6 +25,17 @@ export default (state, action) => {
                 .filter((product) => product.id !== action.payload)
                 .map((product) => product.price)
                 .reduce((prev, current) => prev + current)
+      }
+    case CLEAR_CART:
+      return {
+        ...state,
+        total: 0,
+        products: []
+      }
+    case SET_ERROR:
+      return {
+        ...state,
+        error: action.payload
       }
     default:
       return state

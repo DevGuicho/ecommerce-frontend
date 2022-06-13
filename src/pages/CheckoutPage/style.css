@@ -1,0 +1,14 @@
+.Checkout__container {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+.Checkout__container .InputContainer {
+  flex: 0 1 50%;
+}
+
+@media screen and (min-width: 769px) {
+  .Checkout__container {
+    flex-direction: row;
+  }
+}
